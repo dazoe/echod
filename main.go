@@ -17,6 +17,7 @@ func run() error {
 		return err
 	}
 	udpConn, err := net.ListenUDP(*pProto, udpAddr)
+	fmt.Printf("Listening on %s\n", udpConn.LocalAddr().String())
 	if err != nil {
 		return err
 	}
